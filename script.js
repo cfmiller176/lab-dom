@@ -21,7 +21,7 @@ window.onload =  function(event) {
 
   // Part 1
   const newTitle = document.querySelector("#main-title");
-  newTitle.innerText = "Welcome to my Page";
+  newTitle.innerText = "Welcome to DOM!";
  
 
   // Part 2
@@ -29,16 +29,35 @@ window.onload =  function(event) {
   backGround2.style.background = 'rgb(206,242,216)'
 
   // Part 3
-  //Select **DOM's Favorite Things** list and remove the last list item.
-  const listItems = document.querySelectorAll("#favorite-things");
-  // Jonathan said to use remove child here
+  const element = document.getElementById("favorite-things");
+  element.removeChild(element.lastElementChild);
 
+  }
 
   // Part 4
+  //Select all `.special-title` class elements and change their `font-size` to `2rem`. Remember you might have to iterate through the
+  // list of elements
+  const specialTitles = document.getElementsByClassName("#special-title");
+ // for (let i = 0; i < specialTitles.length; i++) {
+   // specialTitles[i].style.fontSize = '2rem';
+    //console.log(specialTitles);
+  //}
+
 
   // Part 5
+  //Turns out DOM never raced in **Chicago**. Access the **Past Races** list and remove **Chicago**.
+  const editRaces = document.querySelector("#past-races li:nth-of-type(4)");
+  editRaces.removeChild(editRaces);
+
+
+
 
   // Part 6
+  //Let's add to DOM's **Past Races** list. Create a new `<li>` element, change the new `<li>` text to the name of a city, and append
+   //it to the **Past Races** list.
 
   // Part 7
-}
+  //Create a new `.blog-post` corresponding to the new city added in **Part 6**. You will have to create a new `<div>` with class 
+ // of `.blog-post`, a new `<h1>` with text, and a new `<p>` with some text. Make the new element consistent with the other posts.
+   //Think about what order you want to create the elements, and what order you want to append them in.
+
